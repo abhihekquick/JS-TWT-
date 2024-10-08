@@ -1,0 +1,136 @@
+
+let obj={
+    name:'abhishek',
+    age:'27',
+    address:'delhi',
+    education:'btech',
+    salary:10000,
+}
+// console.log(this.name);globally giving window object
+// console.log(obj.name);
+
+ saymydetails=(obj)=>{
+
+        console.log(this.name);
+    
+}
+saymydetails(obj);
+
+let object={
+    name:'abhishek',
+    age:'27',
+    address:'delhi',
+    education:'btech',
+    salary:10000,
+    details:function(){
+        console.log(this);
+    }
+    
+}
+console.log(object.details());//giving parant object
+
+
+let objj={
+    name:'abhishek',
+    age:'27',
+    address:'delhi',
+    education:'btech',
+    salary:10000,
+    details:()=>{
+        console.log(this);
+    }
+    
+}
+console.log(objj.details());//giving object only
+
+let objct={
+    name:'abhishek',
+    age:'27',
+    address:'delhi',
+    education:'btech',
+    salary:10000,
+    detailsp:function parent(){
+        console.log("i am parent funcation");
+        function child(){
+            console.log(this)
+        }
+        child();
+    }
+    
+}
+console.log(objct.detailsp());// it will give window object;
+
+
+let objjct={
+    name:'abhishek',
+    age:'27',
+    address:'delhi',
+    education:'btech',
+    salary:10000,
+    detailspp:function parent(){
+        console.log("i am parent funcation");
+         child=()=>{
+            console.log(this)
+        }
+        child();
+    }
+    
+}
+console.log(objjct.detailspp())//it will give parent object;
+
+let objjt={
+    name:'abhishek',
+    age:'27',
+    address:'delhi',
+    education:'btech',
+    salary:10000,
+    detailspp: ()=>{
+        console.log("i am parent funcation");
+         child=()=>{
+            console.log(this)
+        }
+        child();
+    }
+    
+}
+console.log(objjt.detailspp())//it will give window object;
+
+
+let obt={
+    name:'abhishek',
+    age:'27',
+    address:'delhi',
+    education:'btech',
+    salary:10000,
+    detailspp: parent=()=>{
+        console.log("i am parent funcation");
+         function child(){
+            console.log(this)
+        }
+        child();
+    }
+    
+}
+console.log(obt.detailspp())//it will give window object;
+
+
+function Dynamic(value1,value2,value3,value4,nested1,nested2){
+    this.key1=value1;
+    this.key2=value2;
+    this.key3=value3;
+    this.key4=value4;
+    this.key5={
+        nestedkey:nested1,
+        nestedkey1:nested2
+    };
+}
+console.log (Dynamic("abhi",'2','3','4','4','4'));
+
+let arry=[1,2,4,5];
+let arrry=[1,2,4,5];
+  console.log(arry.splice(0,3));
+  console.log(arrry.slice(0,3));
+  console.log(arry);
+  console.log(arrry);
+
+  
