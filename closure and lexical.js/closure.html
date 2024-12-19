@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOUSER</title>
+</head>
+<body>
+    <script>
+        function outer(){
+            let username="abhishek";
+            function inner(){
+                console.log(`inner`,username);
+            }
+            inner()
+        }
+        outer()
+        console.log(`outter`,username);
+    </script>
+</body>
+</html>
